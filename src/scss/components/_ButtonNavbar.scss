@@ -1,0 +1,26 @@
+@import "../utilities/variables";
+
+
+.buttonNavbar{
+        font-family: $fontSecundary;
+        font-size: 2vh;
+        font-weight:600;
+        padding: 10px 25px;
+        margin: 5px;
+        position: relative;
+        cursor: pointer;
+
+    &::before{
+            content: "";
+            display: inline-block;
+            background-image: url("/img/iconStar.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+            vertical-align: middle;
+
+    }
+        
+}

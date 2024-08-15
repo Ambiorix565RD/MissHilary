@@ -1,0 +1,11 @@
+@import "../utilities/mixin";
+
+.sectionSpinner{
+    @include flex(row, none, center, center);
+    height: 100vh;
+
+        .Spinner{
+            @include flex(row, center, none, center);
+            width: 100%;
+        }
+} 
