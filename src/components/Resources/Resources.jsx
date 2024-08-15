@@ -1,7 +1,21 @@
 import ImgResources from "./ImgResources";
 import "../../scss/components/_Resources.scss";
+import { motion } from "framer-motion";
 
 export default function Resources(){
+
+    const resourcesVariant = {
+        hidden: {opacity: 0, x: 100},
+        visible: (index) => ({
+            opacity: 1,
+            x:0,
+            transition: {
+                delay: index * 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+            }
+        })
+    }
    
     return(
         <>
@@ -14,9 +28,15 @@ export default function Resources(){
                 
                
                 <div className="pdfResources">
-                    <ImgResources name="Leer" link="/Recursos/Leer"/>
-                    <ImgResources name="Trazar" link="/Recursos/Trazar"/>
-                    <ImgResources name="Colorear" link="/Recursos/Colorear"/>
+                    {[{ name:"Leer", link:"/Recursos/Leer"},
+                    { name:"Trazar", link:"/Recursos/Trazar"},
+                    { name:"Colorear", link:"/Recursos/Colorear"}]
+                    .map((resource, index) => (
+                        <motion.div key={resource.name} custom={index} variants={resourcesVariant} initial="hidden" animate="visible">
+                            <ImgResources name={resource.name} link={resource.link}/>
+                        </motion.div>
+                    ))
+                    }
                     <div className="ResourcesBackground"></div>
                 </div>
             </section>

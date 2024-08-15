@@ -8,7 +8,7 @@ export default function Home(){
         <>
             <section className="Home">
                 <div className="imgMissHilary">
-                    <img className="imgMissHilary01" src="/img/missHilary01.png" alt="foto MissHilary" />
+                    <motion.img  initial={{opacity:0, y:20 }} animate={{opacity: 1 , y:0 }} transition={{duration:0.8, ease: "easeInOut"}} className="imgMissHilary01" src="/img/missHilary01.png" alt="foto MissHilary" />
                     <motion.p>
                         {textArray.map((letter, index) => (
                             <motion.span key={index} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.05, delay: index * 0.04,}}>
