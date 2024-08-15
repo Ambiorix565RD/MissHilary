@@ -7,7 +7,7 @@ export default function EmptyServices(){
         <>
             <section className="sectionEmptyService">
                     <div className="EmptyService">
-                        <h2>No ha seleccionado un servicio...😢</h2>
+                        <h2>No haz seleccionado un servicio...😢</h2>
                         <Link to="/Servicios">
                             <button>Ver servicios</button>
                         </Link>

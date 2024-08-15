@@ -1,13 +1,21 @@
-import "../../scss/components/_Home.scss"
+import "../../scss/components/_Home.scss";
+import {motion} from "framer-motion";
 
 export default function Home(){
-
+    const text = "BIENVENIDO/A A MI PÁGINA!\nAQUÍ ENCONTRARÁS RECURSOS EDUCATIVOS PARA TUS PEQUES Y CONOCERÁS MIS SERVICIOS DE TUTORÍAS Y ACOMPAÑAMIENTO PEDAGÓGICO, ¿ESTÁS LISTO/A?";
+    const textArray= text.split("");
     return(
         <>
             <section className="Home">
                 <div className="imgMissHilary">
                     <img className="imgMissHilary01" src="/img/missHilary01.png" alt="foto MissHilary" />
-                    <p>BIENVENIDO/A A MI PÁGINA!<br/> AQUÍ ENCONTRARÁS RECURSOS EDUCATIVOS PARA TUS PEQUES Y CONOCERÁS MIS SERVICIOS DE TUTORÍAS Y ACOMPAÑAMIENTO PEDAGÓGICO, ¿ESTÁS LISTO/A?</p>
+                    <motion.p>
+                        {textArray.map((letter, index) => (
+                            <motion.span key={index} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.05, delay: index * 0.04,}}>
+                                {letter}
+                            </motion.span>
+                        ))}
+                    </motion.p>
                     <div className="shineIcon">
                         <img src="/img/shineIcon.png" alt="shine Icon" />
                     </div>
