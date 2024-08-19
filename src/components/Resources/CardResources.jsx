@@ -13,7 +13,6 @@ export default function CardResources({img, name, url}){
                 <a href={url} download>
                     <button>Descargar</button>
                 </a>
-                
             </div>
         </>
     )

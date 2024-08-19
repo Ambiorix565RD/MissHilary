@@ -226,8 +226,35 @@ export default function ContextProvider({children, servicesSelected}){
 
     }
 
+    //Para las animaciones
+    const resourcesVariant =  {
+        hidden: {opacity: 0, x: 100},
+        visible: (index) => ({
+            opacity: 1,
+            x:0,
+            transition: {
+                delay: index * 0.3,
+                duration: 0.9,
+                ease: "easeInOut",
+            }
+        })
+    }
+
+    const servicesVariant = {
+        hidden: {opacity: 0, x: 100},
+        visible: (index) => ({
+            opacity: 1,
+            x:0,
+            transition: {
+                delay: index * 0.3,
+                duration: 0.9,
+                ease: "easeInOut",
+            }
+        })
+    }
+
     return(
-        <Context.Provider value={{formInputs, setFormInputs, selectedService, handleinputs, validatePhone, handleConfirmEmailBlur, handleConfirmEmailPage, handleSubmit}}>
+        <Context.Provider value={{formInputs, setFormInputs, selectedService, handleinputs, validatePhone, handleConfirmEmailBlur, handleConfirmEmailPage, handleSubmit, resourcesVariant, servicesVariant}}>
             {children}
         </Context.Provider>
     );

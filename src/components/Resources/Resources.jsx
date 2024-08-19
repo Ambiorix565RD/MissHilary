@@ -1,21 +1,13 @@
 import ImgResources from "./ImgResources";
 import "../../scss/components/_Resources.scss";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { Context } from "../Context/Context";
 
 export default function Resources(){
 
-    const resourcesVariant = {
-        hidden: {opacity: 0, x: 100},
-        visible: (index) => ({
-            opacity: 1,
-            x:0,
-            transition: {
-                delay: index * 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-            }
-        })
-    }
+    const {resourcesVariant} = useContext(Context)
+
    
     return(
         <>
