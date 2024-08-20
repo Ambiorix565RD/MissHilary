@@ -11,7 +11,7 @@ export default function Home(){
                     <motion.img  initial={{opacity:0, y:20 }} animate={{opacity: 1 , y:0 }} transition={{duration:0.8, ease: "easeInOut"}} className="imgMissHilary01" src="/img/missHilary01.png" alt="foto MissHilary" />
                     <motion.p>
                         {textArray.map((letter, index) => (
-                            <motion.span key={index} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.05, delay: index * 0.04,}}>
+                            <motion.span key={index} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.05, delay: index * 0.03,}}>
                                 {letter}
                             </motion.span>
                         ))}
@@ -20,8 +20,8 @@ export default function Home(){
                         <img src="/img/shineIcon.png" alt="shine Icon" />
                     </div>
                 </div>
-                <div className="MisshilaryPhrase">
-                    <p>“Sembrad en los niños ideas buenas, aunque no las entiendan; los años se encargarán de descifrarlas en su<br/> entendimiento y de hacerlas florecer en su corazón.”</p>
+                <div className="MisshilaryPhrase" >
+                    <motion.p initial={{opacity:0, y:20 }} animate={{opacity: 1 , y:0 }} transition={{duration:0.8, ease: "easeInOut"}}>“Sembrad en los niños ideas buenas, aunque no las entiendan; los años se encargarán de descifrarlas en su<br/> entendimiento y de hacerlas florecer en su corazón.”</motion.p>
                     <p className="montesorriFont">MARIA MONTESSORI</p>
                     <div className="icons">
                         <a href="https://www.instagram.com/hilarynagely?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><img src="/img/instagramIcon.png" alt="Tiktok Icon" /></a>

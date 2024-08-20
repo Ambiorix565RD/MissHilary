@@ -40,13 +40,14 @@ export default function CategoryResources(){
                 <div className="CategoryResources">
                     {files
                     .filter((file) => file.category === id)
-                    .map((file) =>(
+                    .map((file, index) =>(
                         <CardResources
                             key={file.id}
                             name = {file.name}
                             img ={file.img}
                             title ={file.title}
                             url={file.url}
+                            index={index}
                         />
                     ))}
                 </div>

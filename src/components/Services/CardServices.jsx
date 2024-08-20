@@ -34,7 +34,7 @@ export default function CardServices({img, title, description}){
         <section className="CardServices">
             <div className="CardServicesTwo">
                 <div>
-                    <img className="CardServicesImg" src={img} alt={title}/>
+                    <motion.img className="CardServicesImg" src={img} alt={title} initial={{opacity:0, y:20 }} animate={{opacity: 1 , y:0 }} transition={{duration:0.9, ease: "easeInOut"}}/>
                 </div>
                 <img className="CardServicesImgTwo" src="/img/background2.png" alt="Background" />
             </div>

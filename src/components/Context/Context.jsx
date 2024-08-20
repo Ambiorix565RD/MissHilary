@@ -240,7 +240,7 @@ export default function ContextProvider({children, servicesSelected}){
         })
     }
 
-    const servicesVariant = {
+    const servicesVariant  ={
         hidden: {opacity: 0, x: 100},
         visible: (index) => ({
             opacity: 1,

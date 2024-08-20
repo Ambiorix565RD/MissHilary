@@ -1,10 +1,13 @@
+import { motion} from "framer-motion";
 import "../../scss/components/_AboutMe.scss";
 
 export default function AboutMe(){
 
+
+
     return(
         <>
-            <section className="AboutMe">
+            <motion.section className="AboutMe" initial={{opacity:0, y:20 }} animate={{opacity: 1 , y:0 }} transition={{duration:0.8, ease: "easeInOut"}}>
                 <div className="AboutMeImages">
                     <div>
                         <img src="/img/missHilary02.jpeg" alt="Foto MissHilary" />
@@ -54,7 +57,7 @@ export default function AboutMe(){
                         </div>
                     </section> 
                 </div>
-            </section>
+            </motion.section>
         </>
     )
 }
