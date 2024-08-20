@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import "../../scss/components/_Resources.scss";
 import { getBackground, getFiles, getTitles } from "../../../pdf";
 import { useParams } from "react-router-dom";
 import CardResources from "./CardResources";
 import Loading from "../Loading/Loading";
+import "../../scss/components/_Resources.scss";
 
 export default function CategoryResources(){
     const [files, setfiles] = useState([]);

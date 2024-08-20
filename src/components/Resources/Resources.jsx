@@ -1,8 +1,8 @@
 import ImgResources from "./ImgResources";
-import "../../scss/components/_Resources.scss";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { Context } from "../Context/Context";
+import "../../scss/components/_Resources.scss";
 
 export default function Resources(){
 

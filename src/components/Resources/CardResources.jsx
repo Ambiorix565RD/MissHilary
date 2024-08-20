@@ -12,7 +12,7 @@ export default function CardResources({img, name, url, index}){
         <>
             
             <motion.div className="CardResources" variants={resourcesVariant} initial="hidden" animate="visible" custom={index}>
-                <img src={img} alt={name} className="AboutMe"/>
+                <img src={img} alt={name}/>
                 <p>{name}</p>
                 <a href={url} download>
                     <button>Descargar</button>
