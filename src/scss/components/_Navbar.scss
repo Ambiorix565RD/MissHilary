@@ -8,7 +8,7 @@
     text-align: center;
 
     .MissHilary{
-        margin: 1.5vh 0 0 0;
+        margin-top: 1.5vh;
         font-family: $fontPrimary;
         font-weight: 500;
         font-size: 2.5vh;
@@ -22,6 +22,8 @@
     .NavbarCenter{
         @include flex(row, space-around, center, none);
         width: 55%;
+
+        
     }
 
 }

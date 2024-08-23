@@ -184,7 +184,7 @@ export default function ContextProvider({children, servicesSelected}){
             console.log(result.text);
             Swal.fire({
                 title: "¡Formulario enviado con éxito!",
-                text: "Le estaremos respondiendo de 1 a 2 días laborables para coordinar cita.¡Muchas gracias!",
+                text: "Le estaremos respondiendo de 1 a 2 días laborables para coordinar cita.\n\n¡Muchas gracias!",
                 icon: "success",
                 confirmButtonColor: "#3085d6",
                 confirmButtonText: "OK"

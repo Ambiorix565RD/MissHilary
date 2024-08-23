@@ -1,0 +1,56 @@
+@import "../utilities/mixin";
+@import "../utilities/variables";
+@import "../utilities/reset";
+
+@media (max-width: 1281px) {
+    //laptops y escritorios grandes
+
+    .Navbar{
+        @include flex(row, space-around, center, center);
+        border-bottom: 2px solid #ddd;
+        
+        text-align: center;
+    
+        .MissHilary{
+            margin-top: 1.5vh;
+            font-family: $fontPrimary;
+            font-weight: 500;
+            font-size: 2.5vh;
+    
+            #Hilary{
+                color: $colorPrimary;
+                font-size: 4.5vh;
+                font-weight: 500;
+            }
+        }
+        .NavbarCenter{
+            @include flex(row, space-around, center, none);
+            width: 70%;
+
+            .buttonNavbar{
+                font-family: $fontSecundary;
+                font-size: 2vh;
+                font-weight:600;
+                padding: 5px 10px;
+                margin: 5px;
+                position: relative;
+                cursor: pointer;
+        
+            &::before{
+                    content: "";
+                    display: inline-block;
+                    background-image: url("/img/iconStar.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 8px;
+                    vertical-align: middle;
+        
+            }
+                
+        }
+        }
+    
+    }
+}
