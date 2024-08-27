@@ -141,6 +141,7 @@
 
     .AboutMe{
         @include flex(row, center, center, center);
+        margin-left: 8rem;
         margin-top: 1rem;
         gap: 1rem;
         min-height: calc(100vh - 15rem);
@@ -153,7 +154,7 @@
                 z-index: 1;
     
                 img{
-                    width: 26vw;
+                    width: 30vw;
                     height: 50vh;
                     object-fit: cover;
                     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.247);
@@ -164,9 +165,9 @@
             .backgroundImage{
                 position: absolute;
                 top: 28%;
-                left: -20%;
-                width: 20vw;
-                height: 40vh;
+                left: -18%;
+                width: 25vw;
+                height: 42vh;
                 transform: rotateY(-50%);
                 z-index: 0;
                 box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.247);
@@ -176,33 +177,32 @@
         
     
         .AboutMeTwo{
-            @include flex(column, center, center, center);   
-            
-            
+            @include flex(column, center, center, center); 
+
             .AboutMeTitle{
                 @include flex(row, center, center, center);
-                
+                margin-right: 3rem;
+
                 h1{
                     text-align: center;
                     font-family: $fontSecundary;
                     font-size: 5vh;
                     font-weight: 300;
                     margin-bottom: 1rem;
-                    margin-left: 20rem;
+                    margin-left: 17rem;
                     margin-top: 2rem;
                 }
     
                 img{
                     width: 12vh;
-                    
                 }
     
             }
     
             .AboutMeArrows{
                 @include flex(row, space-around, center, center);
-                margin-left: 10rem;
-
+                margin-left: 5rem;
+                margin-bottom: 0.5rem;
                 img{
                     margin: 0rem 4rem 1rem 6rem;
                     width: 5vw;
@@ -210,11 +210,12 @@
             }
            
             .AboutMeThree{
-                @include grid(repeat(2, 45%), center, center, start, 20px);
-
+                @include grid(repeat(2, 45%), end, center, start, 20px);
+                margin-left: 1rem;
+                
                 .AboutMeText{
                     
-    
+                    
                     div{
     
                         div{
@@ -243,10 +244,11 @@
                 }
                 
                 .AboutMeSkills{
-                    @include flex(column, center, r, center);
+                    @include flex(column, center, center, center);
                     width: 25vw;
                     height: 30vh;
                     margin: 1rem;
+
                     div{
                        
                         .AboutMeSkillsImage{
@@ -283,4 +285,320 @@
         
     }
 
+    //Resources
+    .Resources{
+        @include flex(column, center, center, center);
+        margin: 5rem;
+    
+        .tituleResources{
+            @include flex(row, center, center, center);
+            font-family: $fontSecundary;
+            margin: 2rem;
+    
+            h1{
+                font-size: 5vh;
+            }
+
+            img{
+                margin: 0;
+                width: 5vw;
+                
+            }
+            
+        }
+    
+        .pdfResources{
+            @include flex(row, center, center, center);
+    
+            .imgResources{
+                @include flex(column, center, center, center);
+                text-align: center;
+                margin: 0 1rem;
+                
+                img{
+                    margin: 4rem 6rem 2.5rem 6rem;
+                    width: 7vw;
+                }
+                    
+    
+                button{  
+                    border-radius: 10vh;
+                    width: 50%;
+                    color: black;
+                    font-family: $fontTertiary;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 2.5vh;
+                    position: relative;
+                    background-color: white;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+                }
+            }
+    
+            .ResourcesBackground{
+                position: absolute;
+                bottom: 32.5vh;
+                left: 0;
+                right: 0;
+                height: 15vh;
+                z-index: -1;
+                background-color: #e8e3de;
+                
+            }
+        }
+        
+    }
+    
+    .ResourcesBackgrounds{
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    
+        .CardResourcesContent{
+            @include flex(column, center, center, flex-start);
+            height: 100vh;
+    
+            .CardResourcesTitle{
+                @include flex(row, flex-start, center, end);
+                font-family: $fontTertiary;
+                position: absolute;
+                top: 29vh;
+                left: 3vw;
+                border-radius: 10vh;
+                z-index: 1;
+                padding: 1.5vh;
+                background-color: white;
+        
+                h1{
+                    text-align: left;
+                }
+            }
+    
+            .CategoryResources{
+                @include grid(repeat(3, 21vh), center, center, center, 20px);
+                margin-top: 2rem;
+                margin-left: 3rem;
+        
+                .CardResources{
+                    @include flex(column, center, center, center);
+                    width: 15vw;
+                    margin: 0.5rem;
+                    border-radius: 10vh;
+                    padding: 2vh;
+                    background-color: #e6c9a7;
+        
+                    p{
+                        width: 14vw;
+                        text-align: center;
+                    }
+            
+                    img{
+                        width: 5.8vw;
+                        
+                    }
+            
+                    button{
+                        color: white;
+                        padding: 0.3rem;
+                        border-radius: 50vh;
+                        width: 8vw;
+                        background-color: #db8e6d;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+    
+                        &:hover{
+    
+                            background-color: #eb7c4c; 
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    //Services
+    
+    .Services{
+        @include flex(column, center, center, center);
+        margin: 5rem;
+
+        .tituleServices{
+            @include flex(row, center, center, center);
+            font-family: $fontSecundary;
+            margin-bottom: 3rem;
+            
+            h1{
+                font-size: 5vh;
+                text-align: center;
+                margin-left: 3vw;
+                margin-bottom: 5vh;
+            }
+
+            img{
+                margin: 0;
+                width: 6vw;
+                margin-bottom: 5vh;
+            }
+            
+        }
+
+        .ServicesTwo{
+            @include flex(row, center, center, center);
+
+            .ImgServices{
+                @include flex(column, center, center, center);
+                text-align: center;
+                margin: 0 1.5rem;
+                
+                img{
+                    width: 28vw;
+                    height: 32vh;
+                    border-radius: 5vh;
+                    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.247);
+                }
+                    
+
+                button{  
+                    
+                    border-radius: 10vh;
+                    width: 19vw;
+                    height: 5vh;
+                    color: black;
+                    font-family: $fontTertiary;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 2.5vh;
+                    position: relative;
+                    background-color: white;
+                    margin-top: 1rem;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+                }
+            }
+            
+            .ServicesBackground{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 40vh;
+                z-index: -1;
+                background-color: #e8e3de;
+            }
+
+        }
+        
+    }
+
+    .CardServices{
+        @include flex(row, center, center, center);
+        margin: 2rem 2rem 0rem 2rem;
+    
+        .CardServicesTwo{
+    
+            div{
+                position: relative;
+                z-index: 1;
+                bottom: 20vh;
+    
+                .CardServicesImg{
+                    position: absolute;
+                    width: 38vw;
+                    height: 45vh;
+                    object-fit: cover;
+                    z-index: 1;
+                    right: -25vh;
+                    top: -4vh;
+                    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.247);
+                }
+            }
+            
+    
+            .CardServicesImgTwo{
+                position: absolute;
+                width: 46vw;
+                height: 43.5vh;
+                left: 0vw;
+                bottom: 0.5;
+                z-index: 0;
+                
+            }
+        }
+    
+        .CardServicesThree{
+            @include flex(column, center, center, center);
+            margin: 3rem;
+            position: relative;
+            z-index: 0;
+            left: 30vh;
+            top: 4vh;
+    
+            h1{
+                
+                border: 1px solid black;
+                padding: 3vh;
+                border-radius: 5vh;
+                font-family: $fontTertiary;
+                font-size: 4vh;
+                font-weight: 600;
+                margin-bottom: 2.3rem;
+            }
+    
+            p{
+                
+                font-family: $fontQuinary;
+                width: 40vw;
+                text-align: center;
+                font-size: 2.5vh;
+                font-weight: 500;
+                white-space: pre-line;
+            }
+    
+            button{
+                
+                margin-top: 2rem;
+                img{
+                    width: 5vw;
+                    
+                }
+            }
+        }
+        
+    }
+    
+    .sectionEmptyService{
+        @include flex(row, center, center, center);
+        height: 100%;
+        margin: 0;
+        background-color: #f8f9fa;
+        text-align: center;
+        height: 100vh;
+    
+            .EmptyService{
+                width: 100%;
+                max-width: 400px;
+                margin: 20px;
+                padding: 20px;
+                background-color: #e6c9a7;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+                border-radius: 8px;
+                text-align: center;
+    
+                    button{
+                        margin-top: 1rem;
+                        border: var(--bs-btn-border-width) solid #f8f9fa;
+                        color: white;
+                        background-color:#db8e6d;
+                        border-radius: 25px;
+                        padding: 10px 30px 10px 30px;
+                        
+                        &:hover{
+    
+                            background-color: #eb7c4c; 
+                        }
+                    }
+            }
+    
+    }
+
+    
 }
