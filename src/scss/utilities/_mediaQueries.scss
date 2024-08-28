@@ -600,6 +600,79 @@
     
     }
 
+    //Contact
+
+    .mainForm{
+        @include flex(row, center, center, center);
+        height: 120vh;
+        margin: 0;
+        background-image: url("/img/imgContact.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        .formContainer{
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+    
+            .form{
+                @include flex(column, none, none, none);
+                text-align: center;
+                background-color: #d1d5da;
+                padding: 15px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+                border-radius: 8px;
+            
+                h2{
+                    margin: 2vh;
+                }
+                
+                .form-group{
+                    
+            
+                    label{
+                        @include flex(row, none, none, none);
+                        margin-bottom: 0.5vh;
+                        
+                        
+                        .form-control{
+                            width: 100%;
+                            padding: 2vh;
+                            margin-bottom: 2vh;
+                            box-sizing: border-box;
+                        }
+                        
+            
+                    }
+                }
+                
+                .w-100 {
+                    width: 100% !important;
+                }
+                
+                .btn-primary{
+                    margin-top: 0.5vh;
+                    background-color: #3085d6;
+                    border: none;
+                    padding: 10px;
+                    color: white;
+                    cursor: pointer;
+                    border-radius: 4px;
+            
+                        &:hover{
+                            background-color: #1e6bbd;
+                        }
+                }
+                
+            }
+            
+        }
+    }
+
     
 }
 
