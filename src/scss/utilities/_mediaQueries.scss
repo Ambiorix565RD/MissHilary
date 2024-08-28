@@ -741,88 +741,6 @@
     
     }
 
-     //Home
-
-    .Home{
-        background-image: url("/img/background1.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 87.8vh;
-        
-
-        .imgMissHilary{
-            @include flex(row, center, center, center);
-
-            .imgMissHilary01{
-                width: 35vw;
-                height: 58vh;
-                margin: 3em 3em;
-                border-radius: 50vh;
-                object-fit: cover;
-                display: block;
-                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.247);
-            }
-        
-            p{
-                width: 15vw;
-                height: 50vh;
-                color:$colorPrimary;
-                font-family: $fontTertiary;
-                font-weight: 700;
-                font-size: 2.5vh;
-                text-align: center;  
-                margin-right: 0;
-                white-space: pre-line;
-            }
-        
-            .shineIcon{
-                height: 60vh;
-                
-                img{
-                    margin: 0;
-                    width: 5vw;
-                    height: 10vh;
-                    
-                }
-                
-            }
-        }
-        
-        .MisshilaryPhrase{
-            position: relative;
-            text-align: center;
-            top: 2.5vh;
-            p{
-                @include flex(column, center, center, center);
-                font-family: $fontQuaternary;
-                font-size: 2.5vh;
-                text-align: center;
-                
-            }
-        
-            .montesorriFont{
-               
-                font-family: $fontSecundary;
-            }
-            
-            .icons{
-                @include flex(row, end, center, center);
-                position: absolute;
-                right: 5vw;
-                top: 90%;
-                transform: translateY(-40%);
-        
-                img{
-                    margin-bottom: 0.5em;
-                    width: 3vw;
-                    
-                }
-            }
-        }
-    
-    }
-
     //About Me
 
     .AboutMe{
@@ -1289,4 +1207,6 @@
             }
     
     }
+
+
 }
