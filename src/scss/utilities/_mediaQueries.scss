@@ -818,10 +818,10 @@
 
     .AboutMe{
         @include flex(row, center, center, center);
-        margin-left: 8rem;
+        margin-left: 0;
         margin-top: 1rem;
-        gap: 1rem;
-        min-height: calc(100vh - 15rem);
+        gap: 2rem;
+        min-height: calc(100vh - 14rem);
     
         .AboutMeImages{
             position: relative;
@@ -829,7 +829,7 @@
             div{
                 position: relative;
                 z-index: 1;
-    
+                left: 15%;
                 img{
                     width: 30vw;
                     height: 50vh;
@@ -842,8 +842,8 @@
             .backgroundImage{
                 position: absolute;
                 top: 28%;
-                left: -18%;
-                width: 25vw;
+                left: 4%;
+                width: 30vw;
                 height: 42vh;
                 transform: rotateY(-50%);
                 z-index: 0;
@@ -855,10 +855,11 @@
     
         .AboutMeTwo{
             @include flex(column, center, center, center); 
+            
 
             .AboutMeTitle{
                 @include flex(row, center, center, center);
-                margin-right: 3rem;
+                margin-right: 0rem;
 
                 h1{
                     width: 31vw;
@@ -879,7 +880,7 @@
     
             .AboutMeArrows{
                 @include flex(row, space-around, center, center);
-                margin-left: 5rem;
+                margin-left: 8rem;
                 margin-bottom: 0.5rem;
 
                 img{
@@ -890,6 +891,9 @@
            
             .AboutMeThree{
                 @include grid(repeat(2, 45%), end, center, start, 20px);
+                transform: translateX(2.5rem);
+
+                gap: 2rem;
                 margin: 0;
 
                 .AboutMeText{
@@ -926,12 +930,12 @@
                     @include flex(column, center, center, center);
                     width: 19vw;
                     height: 30vh;
-                    margin: 1rem;
+                    margin: 1rem 0rem 1rem 1rem;
 
                     div{
                        
                         .AboutMeSkillsImage{
-                            width: 10vw;
+                            width: 15vw;
                             height: 4vh;
                         
                         }
@@ -1227,7 +1231,7 @@
             p{
                 
                 font-family: $fontQuinary;
-                width: 45vw;
+                width: 46.5vw;
                 text-align: center;
                 font-size: 2.5vh;
                 font-weight: 500;
