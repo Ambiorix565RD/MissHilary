@@ -11,6 +11,7 @@ export default function ContextProvider({children, servicesSelected}){
     const location = useLocation();
     const selectedService =  location.state?.service || "";
     const [formInputs, setFormInputs] = useState({ parentName:"", parentLastName:"", childName:"", childAge:"4", phone:"", selectedOption:"",  email:"", confirmEmail:"", service: selectedService ||"", educationalCenter:"", teachersName:"", teachersLastName:"", subject:"", topic:""});
+    const [menu, setMenu] = useState(false);
 
     useEffect(() => {
         if(selectedService){
@@ -253,8 +254,18 @@ export default function ContextProvider({children, servicesSelected}){
         })
     }
 
+    //para el menu hamburguesa
+    const menuHamburguer = () => {
+        setMenu(!menu);
+    };
+
+    //funcion para cerrar el menu hamburguesa cuando haga click en un boton
+    const menuClose = () => {
+        setMenu(false);
+    }
+
     return(
-        <Context.Provider value={{formInputs, setFormInputs, selectedService, handleinputs, validatePhone, handleConfirmEmailBlur, handleConfirmEmailPage, handleSubmit, resourcesVariant, servicesVariant}}>
+        <Context.Provider value={{formInputs, setFormInputs, selectedService, handleinputs, validatePhone, handleConfirmEmailBlur, handleConfirmEmailPage, handleSubmit, resourcesVariant, servicesVariant, menuHamburguer, menuClose, menu }}>
             {children}
         </Context.Provider>
     );

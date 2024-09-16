@@ -19,11 +19,17 @@
             font-weight: 500;
         }
     }
+
+    .menuHamburguer{
+        display: none;
+        font-size: 2rem;
+        background: none;
+        border:none;
+        cursor: pointer;
+    }
+    
     .NavbarCenter{
         @include flex(row, space-around, center, none);
         width: 55%;
-
-        
     }
-
 }

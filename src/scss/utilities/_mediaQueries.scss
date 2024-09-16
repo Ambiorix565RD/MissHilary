@@ -1359,3 +1359,718 @@
     }
 
 }
+
+//media para menu hamburguesa
+@media screen and (max-width: 991px){
+
+    //Navbar
+
+    .Navbar{
+        @include flex(row, space-evenly, center, center);
+        border-bottom: 2px solid #ddd;
+        text-align: center;
+        position: relative;
+
+        .MissHilary{
+            margin-top: 1.5vh;
+            font-family: $fontPrimary;
+            font-weight: 500;
+            font-size: 2.5vh;
+    
+            #Hilary{
+                color: $colorPrimary;
+                font-size: 4.5vh;
+                font-weight: 500;
+            }
+        }
+
+        .menuHamburguer{
+            display: block;
+            font-size: 2rem;
+            background: none;
+            border:none;
+            cursor: pointer;
+
+            img{ 
+                width: 5vh;
+            }
+        }
+
+        .NavbarCenter{
+            @include flex(column, center, center, center);
+            width: 100%;
+            text-align: center;
+            height: 92vh;
+            position: absolute;
+            display: none;
+            z-index: 1000;
+            top: 12vh;
+            background-color: white;
+            font-size: 5vh;
+
+            &.open{
+                display: flex;
+            }
+                .buttonNavbar{
+                    font-family: $fontSecundary;
+                    font-size: 2vh;
+                    font-weight:600;
+                    padding: 5px 10px;
+                    margin: 5px;
+                    position: relative;
+                    cursor: pointer;
+            
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    background-image: url("/img/iconStar.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 8px;
+                    vertical-align: middle;
+            
+                }
+                    
+            }
+        }
+    
+    }
+
+}
+
+@media (min-width: 769px) and (max-width:1024px) {
+
+     //Navbar
+
+     .Navbar{
+        @include flex(row, space-evenly, center, center);
+        border-bottom: 2px solid #ddd;
+        text-align: center;
+        position: relative;
+
+        .MissHilary{
+            margin-top: 1.5vh;
+            font-family: $fontPrimary;
+            font-weight: 500;
+            font-size: 2.5vh;
+    
+            #Hilary{
+                color: $colorPrimary;
+                font-size: 4.5vh;
+                font-weight: 500;
+            }
+        }
+
+        .menuHamburguer{
+            display: block;
+            font-size: 2rem;
+            background: none;
+            border:none;
+            cursor: pointer;
+
+            img{ 
+                width: 5vh;
+            }
+        }
+
+        .NavbarCenter{
+            @include flex(column, center, center, center);
+            width: 100%;
+            text-align: center;
+            height: 94vh;
+            position: absolute;
+            display: none;
+            z-index: 1000;
+            top: 10vh;
+            background-color: white;
+            font-size: 5vh;
+
+            &.open{
+                display: flex;
+            }
+                .buttonNavbar{
+                    font-family: $fontSecundary;
+                    font-size: 2vh;
+                    font-weight:600;
+                    padding: 5px 10px;
+                    margin: 5px;
+                    position: relative;
+                    cursor: pointer;
+            
+                &::before{
+                        content: "";
+                        display: inline-block;
+                        background-image: url("/img/iconStar.png");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 8px;
+                        vertical-align: middle;
+            
+                }
+                    
+            }
+        }
+    
+    }
+
+     //Home
+
+     .Home{
+        background-image: url("/img/background1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 87.8vh;
+
+        .imgMissHilary{
+            @include flex(row, center, center, center);
+
+            .imgMissHilary01{
+                width: 55vw;
+                height: 55vh;
+                margin: 3em 3em;
+                border-radius: 50vh;
+                object-fit: cover;
+                display: block;
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.247);
+            }
+        
+            p{
+                width: 24vw;
+                height: 45vh;
+                color:$colorPrimary;
+                font-family: $fontTertiary;
+                font-weight: 700;
+                font-size: 2.3vh;
+                text-align: center;  
+                margin-right: 0;
+                white-space: pre-line;
+            }
+        
+            .shineIcon{
+                height: 55vh;
+                
+                img{
+                    margin: 0;
+                    width: 7vw;
+                    height: 10vh;
+                    
+                }
+                
+            }
+        }
+        
+        .MisshilaryPhrase{
+            position: relative;
+            text-align: center;
+            top: 3vh;
+            p{
+                @include flex(column, center, center, center);
+                font-family: $fontQuaternary;
+                font-size: 2.5vh;
+                text-align: center;
+                
+            }
+        
+            .montesorriFont{
+               
+                font-family: $fontSecundary;
+            }
+            
+            .icons{
+                @include flex(row, end, center, center);
+                position: absolute;
+                right: 5vw;
+                top: 90%;
+                transform: translateY(-50%);
+        
+                img{
+                    margin-bottom: 0.5em;
+                    width: 4.5vw;
+                    
+                }
+            }
+        }
+    
+    }
+
+    //About Me
+
+    .AboutMe{
+        @include flex(row, center, center, center);
+        margin-left: 0;
+        margin-top: 1rem;
+        gap: 2rem;
+        min-height: calc(100vh - 14rem);
+    
+        .AboutMeImages{
+            position: relative;
+    
+            div{
+                position: relative;
+                z-index: 1;
+                left: 15%;
+                img{
+                    width: 30vw;
+                    height: 50vh;
+                    object-fit: cover;
+                    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.247);
+                }
+    
+            }
+    
+            .backgroundImage{
+                position: absolute;
+                top: 28%;
+                left: 4%;
+                width: 30vw;
+                height: 42vh;
+                transform: rotateY(-50%);
+                z-index: 0;
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.247);
+            }
+            
+        }
+        
+    
+        .AboutMeTwo{
+            @include flex(column, center, center, center); 
+            
+
+            .AboutMeTitle{
+                @include flex(row, center, center, center);
+                margin-right: 0rem;
+
+                h1{
+                    width: 31vw;
+                    text-align: center;
+                    font-family: $fontSecundary;
+                    font-size: 5vh;
+                    font-weight: 300;
+                    margin-bottom: 1rem;
+                    margin-left: 16rem;
+                    margin-top: 2rem;
+                }
+    
+                img{
+                    width: 12vh;
+                }
+    
+            }
+    
+            .AboutMeArrows{
+                @include flex(row, space-around, center, center);
+                margin-left: 8rem;
+                margin-bottom: 0.5rem;
+
+                img{
+                    margin: 0rem 4rem 1rem 6rem;
+                    width: 5vw;
+                }
+            }
+           
+            .AboutMeThree{
+                @include grid(repeat(2, 45%), end, center, start, 20px);
+                transform: translateX(2.5rem);
+
+                gap: 2rem;
+                margin: 0;
+
+                .AboutMeText{
+                    
+                    
+                    div{
+    
+                        div{
+                            
+                            img{
+                                width: 30vw;
+                                height: 20vh;
+                               
+                            }
+                        }
+                        
+                        
+                        p{
+                            
+                            font-size: 1.8vh;
+                            width: 35vw;
+                            height: 45vh;
+                            font-family: $fontQuinary;
+                            font-weight: 500;
+                            text-align: justify;
+                            margin: 0;
+                        }
+                    }
+                    
+        
+                }
+                
+                .AboutMeSkills{
+                    @include flex(column, center, center, center);
+                    width: 19vw;
+                    height: 30vh;
+                    margin: 1rem 0rem 1rem 1rem;
+
+                    div{
+                       
+                        .AboutMeSkillsImage{
+                            width: 15vw;
+                            height: 4vh;
+                        
+                        }
+                    }
+        
+                    .AboutMeSkillsTwo{
+                        @include flex(column, center, center, center);
+    
+                        .AboutMeSkillsThree{
+                            @include flex(row, center, center, center);
+                        
+                            img{
+                                width: 5.4vw;
+                                
+                            }
+    
+                            h3{
+                                
+                                margin-top: 2rem;
+                            }
+    
+                        }
+                    }
+                }
+    
+            }
+    
+        }
+    
+    }
+
+     //Resources
+     .Resources{
+        @include flex(column, center, center, center);
+        margin: 5rem;
+    
+        .tituleResources{
+            @include flex(row, center, center, center);
+            font-family: $fontSecundary;
+            margin: 2rem;
+            position: relative;
+            h1{
+                font-size: 5vh;
+                width: 85vw;
+                text-align: center;
+            }
+
+            img{
+                position: absolute;
+                margin: 0;
+                width: 9vw;
+                height: 10vh;
+                right: -6vw;
+                top: -2vh;
+            }
+            
+        }
+    
+        .pdfResources{
+            @include flex(row, center, center, center);
+    
+            .imgResources{
+                @include flex(column, center, center, center);
+                text-align: center;
+                margin: 0 0;
+                
+                img{
+                    margin: 2.2rem 5rem 1.5rem 5.5rem;
+                    width: 11vw;
+                    height: 10vh;
+                }
+                    
+    
+                button{  
+                    border-radius: 10vh;
+                    width: 55%;
+                    color: black;
+                    font-family: $fontTertiary;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 2.5vh;
+                    position: relative;
+                    background-color: white;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+                }
+            }
+    
+            .ResourcesBackground{
+                position: absolute;
+                bottom: 32.5vh;
+                left: 0;
+                right: 0;
+                height: 15vh;
+                z-index: -1;
+                background-color: #e8e3de;
+                
+            }
+        }
+        
+    }
+    
+    .ResourcesBackgrounds{
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    
+        .CardResourcesContent{
+            @include flex(column, center, center, flex-start);
+            height: 100vh;
+    
+            .CardResourcesTitle{
+                @include flex(row, flex-start, center, end);
+                font-family: $fontTertiary;
+                position: absolute;
+                top: 29vh;
+                left: 3vw;
+                border-radius: 10vh;
+                z-index: 1;
+                padding: 1.5vh;
+                background-color: white;
+        
+                h1{
+                    text-align: left;
+                }
+            }
+    
+            .CategoryResources{
+                @include grid(repeat(3, 20vh), center, center, center, 20px);
+                margin-top: 0rem;
+                margin-left: 3rem;
+        
+                .CardResources{
+                    @include flex(column, center, center, center);
+                    width: 23vw;
+                    margin: 0.5rem;
+                    border-radius: 10vh;
+                    padding: 2vh;
+                    background-color: #e6c9a7;
+        
+                    p{
+                        width: 25vw;
+                        text-align: center;
+                    }
+            
+                    img{
+                        width: 9vw;
+                        
+                    }
+            
+                    button{
+                        color: white;
+                        padding: 0.4rem;
+                        border-radius: 50vh;
+                        width: 14vw;
+                        background-color: #db8e6d;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+    
+                        &:hover{
+    
+                            background-color: #eb7c4c; 
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    //Services
+    
+    .Services{
+        @include flex(column, center, center, center);
+        margin: 5rem;
+
+        .tituleServices{
+            @include flex(row, center, center, center);
+            font-family: $fontSecundary;
+            margin-bottom: 3rem;
+            
+            h1{
+                font-size: 5vh;
+                text-align: center;
+                margin-left: 3vw;
+                margin-bottom: 1vh;
+            }
+
+            img{
+                margin: 0;
+                width: 8vw;
+                margin-bottom: 5vh;
+            }
+            
+        }
+
+        .ServicesTwo{
+            @include flex(row, center, center, center);
+
+            .ImgServices{
+                @include flex(column, center, center, center);
+                text-align: center;
+                margin: 0rem 0.5rem;
+                
+                img{
+                    margin-top: 3.5rem;
+                    width: 30vw;
+                    height: 24vh;
+                    border-radius: 5vh;
+                    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.247);
+                }
+                    
+
+                button{  
+                    
+                    border-radius: 10vh;
+                    width: 28vw;
+                    height: 5vh;
+                    color: black;
+                    font-family: $fontTertiary;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 2.3vh;
+                    position: relative;
+                    background-color: white;
+                    margin-top: 1rem;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+                }
+            }
+            
+            .ServicesBackground{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 40vh;
+                z-index: -1;
+                background-color: #e8e3de;
+            }
+
+        }
+        
+    }
+
+    .CardServices{
+        @include flex(row, center, center, center);
+        margin: 2rem 2rem 0rem 2rem;
+    
+        .CardServicesTwo{
+    
+            div{
+                position: relative;
+                z-index: 1;
+                bottom: 20vh;
+    
+                .CardServicesImg{
+                    position: absolute;
+                    width: 43vw;
+                    height: 45vh;
+                    object-fit: cover;
+                    z-index: 1;
+                    right: -22vh;
+                    top: 2vh;
+                    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.247);
+                }
+            }
+            
+    
+            .CardServicesImgTwo{
+                position: absolute;
+                width: 50vw;
+                height: 45.5vh;
+                left: 0vw;
+                bottom: 0vh;
+                z-index: 0;
+                top: 54vh;
+            }
+        }
+    
+        .CardServicesThree{
+            @include flex(column, center, center, center);
+            margin: 0;
+            position: relative;
+            z-index: 0;
+            left: 30vh;
+            top: 8vh;
+    
+            h1{
+                
+                border: 1px solid black;
+                padding: 3vh;
+                border-radius: 5vh;
+                font-family: $fontTertiary;
+                font-size: 4vh;
+                font-weight: 600;
+                margin-bottom: 2.3rem;
+            }
+    
+            p{
+                
+                font-family: $fontQuinary;
+                width: 46.5vw;
+                text-align: center;
+                font-size: 2.5vh;
+                font-weight: 500;
+                white-space: pre-line;
+            }
+    
+            button{
+                
+                
+                img{
+                    width: 7vw;
+                    
+                }
+            }
+        }
+        
+    }
+    
+    .sectionEmptyService{
+        @include flex(row, center, center, center);
+        height: 100%;
+        margin: 0;
+        background-color: #f8f9fa;
+        text-align: center;
+        height: 100vh;
+    
+            .EmptyService{
+                width: 100%;
+                max-width: 400px;
+                margin: 20px;
+                padding: 20px;
+                background-color: #e6c9a7;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+                border-radius: 8px;
+                text-align: center;
+    
+                    button{
+                        margin-top: 1rem;
+                        border: var(--bs-btn-border-width) solid #f8f9fa;
+                        color: white;
+                        background-color:#db8e6d;
+                        border-radius: 25px;
+                        padding: 10px 30px 10px 30px;
+                        
+                        &:hover{
+    
+                            background-color: #eb7c4c; 
+                        }
+                    }
+            }
+    
+    }
+
+}
